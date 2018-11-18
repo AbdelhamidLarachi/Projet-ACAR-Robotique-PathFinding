@@ -1,0 +1,10 @@
+
+void Accuse(){
+  int test = 0 
+  vw_rx_start();
+  byte taille_message = sizeof(test);
+  vw_wait_rx_max(1000);
+  if (vw_get_message((byte *) &test, &taille_message)) {
+    Serial.print("sent");
+    
+  }
